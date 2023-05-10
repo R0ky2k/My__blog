@@ -17,6 +17,8 @@ const notify = require("gulp-notify");
 const webpack = require('webpack');
 const webpackStream = require('webpack-stream');
 const browserSync = require("browser-sync").create();
+const imagemin = require("gulp-imagemin");
+
 
 
 /* Paths */
@@ -48,7 +50,10 @@ const path = {
 	clean: "./" + distPath
 }
 
-
+const paths = {
+	images: 'src/images/*',
+	dest: 'dist/images'
+}
 
 /* Tasks */
 
@@ -137,6 +142,8 @@ function cssWatch(cb) {
 	cb();
 }
 
+
+
 function js(cb) {
 	return src(path.src.js, { base: srcPath + 'assets/js/' })
 		.pipe(plumber({
@@ -185,11 +192,13 @@ function jsWatch(cb) {
 
 function images(cb) {
 	return src(path.src.images)
+		.pipe(imagemin())
 		.pipe(dest(path.build.images))
 		.pipe(browserSync.reload({ stream: true }));
 
 	cb();
 }
+
 
 function fonts(cb) {
 	return src(path.src.fonts)
