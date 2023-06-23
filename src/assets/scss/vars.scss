@@ -1,6 +1,5 @@
-
-$fontfamily: -apple-system, BlinkMacSystemFont, Segoe\ UI, Roboto, Helvetica\ Neue, Arial, Noto\ Sans, sans-serif;
-$fontsize: 14px;
+$fontfamily: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$fontsize: 1.4rem;
 $fontcolor: black;
 
 $background: #181818;
@@ -9,4 +8,4 @@ $secondary: #121212;
 $white: #fff;
 $z-index-sidebar: 100;
 $z-index-header: 100;
-$sidebar-width: 300px;
+$sidebar-width: 350px;

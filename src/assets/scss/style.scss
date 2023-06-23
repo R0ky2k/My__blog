@@ -1,17 +1,25 @@
 @import "vars";
 @import "nullstyle";
+// @import "reset1";
 
 
-// body {
-// 	background-color: $background;
-// 	color: white;
-// 	font-size: 21px;
-// 	font-family: $fontfamily;
-// }
+body {
+	background-color: $background;
+	color: $white;
+	font-size: $fontsize;
+	font-family: $fontfamily;
+}
 
 /* Blocks */
+
 @import "blocks/wrapper";
 @import "blocks/header";
+@import "blocks/nav";
 @import "blocks/sidebar";
 @import "blocks/main";
 @import "blocks/container";
+@import "blocks/social";
+@import "blocks/profile";
+@import "blocks/btn";
+
+// https://www.youtube.com/watch?v=1ccA_Jo6u-o&list=PLoq3Accf02PWYMRAU8RDRjSfJK52vUTo2&index=1
